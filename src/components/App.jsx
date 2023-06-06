@@ -19,6 +19,8 @@ import { nanoid } from "nanoid";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import Filter from "./filterContact/filterContact";
+import css from './App.module.css'
+
 
 
 export  class App extends Component {
@@ -61,7 +63,7 @@ export  class App extends Component {
       contact.name.toLowerCase().includes(this.state.filter.toLowerCase())
     );
     return (
-      <div >
+      <div className={css.conteiner}>
         <h1 >Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
 
