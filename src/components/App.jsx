@@ -33,14 +33,14 @@ export  class App extends Component {
     ],
     filter: '',
   };
-  addContact = ({ name, contacts }) => {
+  addContact = ({ name, number }) => {
     const newContact = {
       id: nanoid(),
       name: name,
-      contacts: contacts,
+      number: number,
     };
 
-    if (this.state.contacts.find(contact => contact.name.toLocaleLowerCase === name.toLocaleLowerCase)) {
+    if (this.state.contacts.find(contact => contact.name === name)) {
       alert(`${name} is already in contacts`);
       return false;
     }

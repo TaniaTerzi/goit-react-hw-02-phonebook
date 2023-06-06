@@ -6,7 +6,7 @@ import css from './contactForm.module.css'
 class ContactForm extends Component {
     loginInputId = nanoid();
     state = {
-    contacts: [],
+    // contacts: [],
     name: '',
     number: '',
   };
@@ -15,19 +15,19 @@ class ContactForm extends Component {
     e.preventDefault();
     this.props.onSubmit(this.state);
     this.setState({
-    contacts: [],
+    // contacts: [],
     name: '',
     number: '',
     });
   };
   nameChange = e => {
     this.setState({
-      name: e.target.value,
+      name: e.currentTarget.value,
     });
   };
   numberChange = e => {
     this.setState({
-        contacts: e.target.value,
+      number: e.currentTarget.value,
     });
   };
   render() {
